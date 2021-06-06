@@ -51,6 +51,7 @@ error-output {
 * {
     box-sizing: border-box;
 }
+/* UC2 */
 
 .form-content {
     display: flex;
