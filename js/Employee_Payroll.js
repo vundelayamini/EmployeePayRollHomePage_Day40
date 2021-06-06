@@ -56,9 +56,7 @@ class EmployeePayrollData {
     }
 
     set startDate(startDate) {
-        if (startDate<= new Date())
-            this._startDate = startDate;
-        else throw "Incorrect start date";
+        this._startDate = startDate; 
     }
 
     get note() {
@@ -71,8 +69,6 @@ class EmployeePayrollData {
 
     //method
     toString() {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const empDate = !this.startDate ? "undefined" : this.startDate.toLocalDateString("en-US", options);
-        return "id=" + this.id + ", name=" + this.name + ", gender=" + this.gender + ", picture=" + this.picture + ", department=" + this.department +", salary=" + this.salary + ", empDate=" + this.startDate + ", note=" + this.note;
+        return "id=" + this.id + ", name=" + this.name + ", gender=" + this.gender + ", picture=" + this.picture + ", department=" + this.department +", salary=" + this.salary + ", startDate=" + this.startDate + ", note=" + this.note;
     }
 }

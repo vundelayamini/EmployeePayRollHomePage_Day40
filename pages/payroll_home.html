@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600
                     &display=swap" rel="stylesheet">
     <title>Employee Payroll App</title>
-    <script defer src="../js/payroll_home.js"></script>
 </head>
 <body>
     <header class="header-content header">
@@ -18,7 +17,7 @@
             <div>
                 <span class="emp-text">EMPLOYEE</span><br>
                 <span class="emp-text emp-payroll">PAYROLL</span>
-            </div>
+            </div> 
         </div>
     </header>
     <div class="main-content">
@@ -27,37 +26,17 @@
             <div class="emp-detail-text">
                 Employee Details <div class="emp-count">10</div>
             </div>
-            <a href="../pages/payroll_form.html" class="add-button">
+            <a href="../pages/RegisterEmployee.html" class="add-button">
                 <img src="../assests/icons/add-24px.svg" alt="">Add User</a>
         </div>
-
-    </div> <div class="table-main">
-            <table id="display" class="table">
-        <!-- UC 3 -->
-        <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Department</th>
-            <th>Salary</th>
-            <th>Start Date</th>
-            <th>Actions</th>
-        </tr>
-        <tr>
-            <td><img class="profile" alt="" src="../assests//profile-images/Ellipse -3.png"></td>
-            <td>Sivakumar U</td>
-            <td>Male</td>
-            <td><div class='dept-label'>HR</div>
-                <div class='dept-label'>Finance</div></td>
-            <td>3000000</td>
-            <td>1 Nov 2020</td>
-            <td>
-                <img id="1" onclick="remove(this)" alt="delete" src="../assests/icons/delete-black-18dp.svg">
-                <img id="1" alt="edit" onclick="update(this)" src="../assests/icons/create-black-18dp.svg">
-            </td>
-        </tr>
-    </table>
-</div>
-</div>
+        <div class="table-main">
+                <table id="table-display" class="table">
+                </table>
+            </div>
+        </div>
+        <script src="../js/employee_home.js"></script>
+        <script src="../js/Utility.js"></script>
+        <script src="../js/Site_properties.js"></script>
+        <script src="../js/Employee_Payroll.js"></script>
 </body>
-</html> 
+</html>
