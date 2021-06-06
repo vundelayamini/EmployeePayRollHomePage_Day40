@@ -23,3 +23,55 @@ const createInnerHtml = () => {
 `;
     document.querySelector('#table-display').innerHTML = innerHtml;
 }
+const createEmployeePayrollJSON = () => {
+    let empPayrollListLocal = [
+        {
+            _name: 'Yamini P',
+            _gender: 'female',
+            _department: [
+                'Engineering',
+                'Finance'
+            ],
+            _salary: '6000000',
+            _startDate: '21 Aug 2019',
+            _note: '',
+            _id: new Date().getTime(),
+            _profilePic: '../assests/profile-images/Ellipse -3.png'
+        },
+        {
+            _name: 'Raja Reddy',
+            _gender: 'male',
+            _department: [
+                'Engineering',
+                'Sales'
+            ],
+            _salary: '5000000',
+            _startDate: '18 May 2020',
+            _note: '',
+            _id: new Date().getTime() + 1,
+            _profilePic: '../assests/profile-images/Ellipse -2.png'
+        },
+        {
+            _name: 'Swetha N',
+            _gender: 'female',
+            _department: [
+                'Engineering',
+                'Hr'
+            ],
+            _salary: '10000000',
+            _startDate: '05 Oct 2020',
+            _note: '',
+            _id: new Date().getTime() + 1,
+            _profilePic: '../assests/profile-images/Ellipse -1.png'
+        }
+    ];
+    return empPayrollListLocal;
+}
+
+const getDeptHtml = (deptList) => {
+    let deptHtml = '';
+    for (const dept of deptList) {
+        deptHtml = `${deptHtml} <div class='dept-label'>${dept}</div>`
+    }
+    return deptHtml;
+}
